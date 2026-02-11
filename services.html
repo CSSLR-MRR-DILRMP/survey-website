@@ -10,74 +10,110 @@
 <body>
 
 <nav>
+<div class="nav-inner">
 <div class="logo">Govt of AP | Survey Dept</div>
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="services.html">Equipment</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
+</div>
 </nav>
 
-<section class="section">
-<div class="title">
+<div style="height:70px"></div>
+
+<section class="section container">
+
+<div class="section-title">
 <h2>Survey Equipment & Technology</h2>
-<p>Used across Andhra Pradesh for modern land survey</p>
+<p>Modern tools used in Andhra Pradesh land survey</p>
 </div>
 
-<div class="grid">
+<div class="carousel-wrapper">
+
+<button class="arrow left" onclick="move(-1)">‹</button>
+<button class="arrow right" onclick="move(1)">›</button>
+
+<div class="carousel" id="carousel">
 
 <!-- CARD -->
-<div class="card fade">
+<div class="card">
 <div class="card-inner">
 <div class="card-front">
 <img src="https://cdn-icons-png.flaticon.com/512/2920/2920349.png">
 <h3>Survey Chain</h3>
 </div>
 <div class="card-back">
-Used for traditional linear measurement of land boundaries.
+Used for traditional land distance measurement and boundary verification.
 </div>
 </div>
 </div>
 
-<div class="card fade">
+<div class="card">
 <div class="card-inner">
 <div class="card-front">
 <img src="https://cdn-icons-png.flaticon.com/512/3059/3059518.png">
 <h3>Theodolite</h3>
 </div>
 <div class="card-back">
-Measures horizontal and vertical angles precisely.
+Measures horizontal & vertical angles with precision.
 </div>
 </div>
 </div>
 
-<div class="card fade">
+<div class="card">
 <div class="card-inner">
 <div class="card-front">
 <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png">
 <h3>Total Station</h3>
 </div>
 <div class="card-back">
-Advanced digital instrument for accurate coordinate measurement.
+Advanced digital surveying equipment for coordinates.
 </div>
 </div>
 </div>
 
-<div class="card fade">
+<div class="card">
 <div class="card-inner">
 <div class="card-front">
 <img src="https://cdn-icons-png.flaticon.com/512/149/149060.png">
 <h3>GNSS Rover</h3>
 </div>
 <div class="card-back">
-Satellite-based high precision land survey technology.
+Satellite-based high precision land survey system.
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-inner">
+<div class="card-front">
+<img src="https://cdn-icons-png.flaticon.com/512/483/483356.png">
+<h3>CORS Network</h3>
+</div>
+<div class="card-back">
+Provides real-time GPS correction data across AP.
 </div>
 </div>
 </div>
 
 </div>
+</div>
+
 </section>
 
-<script src="script.js"></script>
+<footer>
+© Govt of Andhra Pradesh | Survey Department
+</footer>
+
+<script>
+let scrollPos=0;
+function move(direction){
+const carousel=document.getElementById("carousel");
+scrollPos += direction * 300;
+carousel.style.transform=`translateX(${-scrollPos}px)`;
+}
+</script>
+
 </body>
 </html>
